@@ -1,0 +1,11 @@
+build*/
+out/
+__pycache__/
+*.pyc
+.superpowers/
+.worktrees/
+*.o
+*.a
+*.elf
+*.bin
+*.map
