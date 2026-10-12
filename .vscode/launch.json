@@ -1,0 +1,7 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name":"导航仿真 (GDB)","type":"cppdbg","request":"launch","program":"${workspaceFolder}/build/nav/nav_sim","args":["1200","1","out/debug","combined"],"cwd":"${workspaceFolder}","MIMode":"gdb","preLaunchTask":"build","windows":{"program":"${workspaceFolder}/build/nav/Debug/nav_sim.exe"}},
+    {"name":"导航仿真 (MSVC)","type":"cppvsdbg","request":"launch","program":"${workspaceFolder}/build/nav/Debug/nav_sim.exe","args":["1200","1","out/debug","combined"],"cwd":"${workspaceFolder}","preLaunchTask":"build"}
+  ]
+}

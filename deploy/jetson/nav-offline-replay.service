@@ -1,0 +1,15 @@
+[Unit]
+Description=UAV navigation CPU companion offline image replay
+ConditionPathExists=/var/lib/uav-navigation/frames.manifest
+
+[Service]
+Type=oneshot
+User=uav
+Group=uav
+WorkingDirectory=/opt/uav-navigation2
+ExecStart=/opt/uav-navigation2/build/companion/nav_companion --replay /var/lib/uav-navigation/frames.manifest
+StandardOutput=append:/var/log/uav-navigation/measurements.jsonl
+StandardError=journal
+NoNewPrivileges=true
+ProtectHome=true
+PrivateTmp=true

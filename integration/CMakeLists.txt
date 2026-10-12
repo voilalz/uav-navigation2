@@ -1,0 +1,7 @@
+if(BUILD_TESTING AND NOT CMAKE_CROSSCOMPILING)
+  find_package(Python3 COMPONENTS Interpreter QUIET)
+  if(Python3_Interpreter_FOUND)
+    add_test(NAME flight_controller_bridge COMMAND ${Python3_EXECUTABLE} -m unittest discover -s integration/tests -v)
+    set_tests_properties(flight_controller_bridge PROPERTIES WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+  endif()
+endif()

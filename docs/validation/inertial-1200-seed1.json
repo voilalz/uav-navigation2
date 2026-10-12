@@ -1,0 +1,8 @@
+{
+  "duration_s": 1200, "seed": 1, "scenario": "inertial",
+  "horizontal_rms_m": 12258.36202, "cep_m": 11265.78452, "horizontal_p95_m": 18567.05274, "horizontal_max_m": 19917.98854,
+  "output_hz": 30, "output_count": 36000,
+  "position_nees_mean": 1.67435981, "accepted_nis_mean": 0.9832501495,
+  "measurements_accepted": 59949, "measurements_rejected": 51, "time_rejected": 0,
+  "injected_outliers": 0, "injected_outliers_rejected": 0, "wall_time_s": 8.459621569
+}

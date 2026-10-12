@@ -1,0 +1,8 @@
+{
+  "duration_s": 3600, "seed": 1, "scenario": "combined",
+  "horizontal_rms_m": 9.512684441, "cep_m": 7.819946666, "horizontal_p95_m": 16.67634088, "horizontal_max_m": 25.46058532,
+  "output_hz": 30, "output_count": 108000,
+  "position_nees_mean": 3.165343321, "accepted_nis_mean": 1.408173418,
+  "measurements_accepted": 503339, "measurements_rejected": 551, "time_rejected": 0,
+  "injected_outliers": 8, "injected_outliers_rejected": 8, "wall_time_s": 24.54242575
+}

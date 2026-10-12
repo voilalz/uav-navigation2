@@ -1,0 +1,30 @@
+name: navigation-ci
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  host:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build --config Release --parallel 4
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+  sanitizer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure sanitizers
+        run: cmake -S . -B build-san -DCMAKE_BUILD_TYPE=Debug -DNAV_SANITIZE=ON
+      - name: Build
+        run: cmake --build build-san --parallel 4
+      - name: Test
+        run: ctest --test-dir build-san --output-on-failure

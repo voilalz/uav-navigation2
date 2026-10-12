@@ -1,0 +1,9 @@
+[Match]
+# 改成与MCU相连的真实网卡名；只适用于使用systemd-networkd的系统。
+Name=eth1
+
+[Network]
+Address=192.168.42.2/24
+DHCP=no
+LinkLocalAddressing=no
+IPv6AcceptRA=no
