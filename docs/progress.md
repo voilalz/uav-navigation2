@@ -13,3 +13,5 @@
 审查修正：未来量测不再阻塞后续量测；IMU长缺口明确锁定失效并需重新对准；DEM元数据有限值检查；VO明确BODY/NED与观测维度；重启会话显式重置；NAV输出期限避免浮点累加；协方差预测配置下限20Hz；目标任务栈依据宿主报告增大且要求ARM复核。
 
 证据：Release 15/15，ASan/UBSan 15/15（LSan环境受限），Python通信16例，100×1200秒MC与3600秒seed1。详细范围见verification.md。远端提交完成后以GitHub提交和树为最终交付记录。
+
+远端实现提交：`de66b009450b0ba63cdca5a51aee9e0c4b0425fb`，main共91个文件；README、协议头和100次仿真JSON已逐字读取核对。
